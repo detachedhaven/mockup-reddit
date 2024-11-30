@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Reddit - Dive into anything</title>
+  </head>
+  <body>
+    <header class="banner">
+      <a href="" class="banner__logo">reddit</a>
+      <input type="search" placeholder="Search Reddit" class="banner__search" />
+    </header>
+    <main>
+      <nav class="nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="" class="nav__active">Popular</a></li>
+        </ul>
+        <ul>
+          <li>Topics</li>
+          <li><a href="">Internet Culture (Viral)</a></li>
+          <li><a href="">Games</a></li>
+          <li><a href="">Q&As</a></li>
+        </ul>
+        <ul>
+          <li>Resources</li>
+          <li><a href="">About Reddit</a></li>
+          <li><a href="">Advertise</a></li>
+          <li><a href="">Help</a></li>
+        </ul>
+      </nav>
+      <!-- feed -->
+      <section class="feed">
+        <div class="feed__highlights highlights">
+          <article class="highlights__topic">
+            <a>
+              <img src="assets/highlight-1.webp" alt="" />
+              <header>
+                <h3>UK MPs on assisted dying bill</h3>
+              </header></a
+            >
+          </article>
+          <article class="highlights__topic">
+            <a>
+              <img src="assets/highlight-2.webp" alt="" />
+              <header>
+                <h3>Bears fire head coach</h3>
+              </header></a
+            >
+          </article>
+          <article class="highlights__topic">
+            <a>
+              <img src="assets/highlight-3.webp" alt="" />
+              <header>
+                <h3>Duct-tape banana art eaten</h3>
+              </header></a
+            >
+          </article>
+        </div>
+        <!-- <h1>feed highlights</h1>
+        <h1>feed filter</h1> -->
+
+        <div class="feed__content">
+          <aside class="feed__aside">
+            <section class="card">
+              <header>
+                <h3>Popular Communities</h3>
+              </header>
+              <ul>
+                <li><a href="">r/NoStupidQuesetions</a></li>
+                <li><a href="">r/Minecraft</a></li>
+                <li><a href="">r/Fitness</a></li>
+              </ul>
+            </section>
+          </aside>
+          <div class="feed__posts">
+            <!-- post 1 -->
+            <article class="post">
+              <a href="">
+                <div class="card">
+                  <a href="" class="post__subreddit">r/AskReddit</a>
+                  <header>
+                    <h2>
+                      Dudes of Reddit, what is the hardest thing to explain to
+                      women?
+                    </h2>
+                  </header>
+                  <ul class="post__actions">
+                    <li><button>4.7K Upvotes</button></li>
+                    <li><button>4.9K Comments</button></li>
+                    <li>
+                      <button class="post__share">Share</button>
+                      <span class="post__share-options">
+                        <ul>
+                          <li><button>Copy link</button></li>
+                          <li><button>Embed</button></li>
+                        </ul>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- post 2 -->
+            <article class="post">
+              <a href="">
+                <div class="card">
+                  <a href="" class="post__subreddit">r/repost</a>
+                  <header>
+                    <h2>Where do you take your first bite?</h2>
+                  </header>
+                  <img src="assets/post-2.webp" alt="" />
+                  <ul class="post__actions">
+                    <li><button>3.9K Upvotes</button></li>
+                    <li><button>3.1K Comments</button></li>
+                    <li>
+                      <button class="post__share">Share</button>
+                      <span class="post__share-options">
+                        <ul>
+                          <li><button>Copy link</button></li>
+                          <li><button>Embed</button></li>
+                        </ul>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- post 3 -->
+            <article class="post">
+              <a href="">
+                <div class="card">
+                  <a href="" class="post__subreddit">r/videogames</a>
+                  <header>
+                    <h2>What game is this?</h2>
+                  </header>
+                  <img src="assets/post-3.webp" alt="" />
+                  <ul class="post__actions">
+                    <li><button>4.7K Upvotes</button></li>
+                    <li><button>2.7K Comments</button></li>
+                    <li>
+                      <button class="post__share">Share</button>
+                      <span class="post__share-options">
+                        <ul>
+                          <li><button>Copy link</button></li>
+                          <li><button>Embed</button></li>
+                        </ul>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const shareButtons = document.querySelectorAll(".post__share");
+      shareButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const shareOptions = e.target.parentNode.querySelector(
+            ".post__share-options"
+          );
+          shareOptions.style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>

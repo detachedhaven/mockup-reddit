@@ -1,0 +1,188 @@
+/* styling, resets */
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-weight: bold;
+  font-size: 0.75rem;
+  background-color: #e5ebef;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+img {
+  border-radius: 1rem;
+}
+
+/* general layout */
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* banner */
+.banner {
+  padding: 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.banner__logo {
+  color: #ff4500;
+  font-size: 3rem;
+  font-weight: bolder;
+  width: 25%;
+}
+
+.banner__search {
+  background-color: #e5ebef;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  width: 50%;
+  height: 1rem;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: start;
+}
+
+.nav {
+  padding: 1rem;
+  flex: 1;
+}
+
+.nav ul li {
+  line-height: 1.5;
+}
+
+.nav ul::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 1rem 0;
+}
+
+.feed {
+  width: 80%;
+  border-left: 1px solid #e6e6e6;
+}
+
+.highlights {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+}
+
+.highlights__topic {
+  height: 150px;
+}
+
+.highlights__topic img {
+  height: 100%;
+}
+
+.highlights__topic header {
+  color: white;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.feed__posts {
+  width: 65%;
+}
+
+.feed__aside {
+  float: right;
+  position: sticky;
+  margin-right: 10%;
+  top: 1rem;
+  background-color: #f5f8f9;
+  border-radius: 1rem;
+}
+
+/* post */
+.post {
+  font-weight: bold;
+}
+
+.post::after {
+  content: "";
+  border-bottom: 1px solid #e6e6e6;
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.post:hover {
+  cursor: pointer;
+}
+
+.post__actions {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.25rem;
+}
+
+.post__actions button:hover {
+  background-color: #dbe4e9;
+  cursor: pointer;
+}
+
+.post__share-options {
+  display: none;
+}
+
+.post__share-options ul {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+.post__share-options button {
+  background-color: inherit;
+}
